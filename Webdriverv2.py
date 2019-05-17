@@ -45,15 +45,16 @@ class Testcode123(unittest.TestCase):
         driver = self.driver
         driver.get("http://www.ticketleap.com/login/?next=http%3A//veronicatangfringe.ticketleap.com/")
         driver.find_element_by_id("id_username").clear()
-        driver.find_element_by_id("id_username").send_keys("tangv@bishops.com")
+        driver.find_element_by_id("id_username").send_keys("chenk21@mit.edu")
         driver.find_element_by_id("id_password").clear()
-        driver.find_element_by_id("id_password").send_keys("Moonstar5181")
+        #sub in your password here you stupid Pikachu
+        driver.find_element_by_id("id_password").send_keys("screw you")
         driver.find_element_by_id("email_login_button").click()
         time.sleep(1)
         for code in list:
             driver.get("about:home")
             time.sleep(1)
-            driver.get("https://sdfringe18.ticketleap.com/admin/promote/discount-codes/#dialog=/admin/promote/discount-code/add")
+            driver.get("https://veronicatangfringe.ticketleap.com/admin/promote/discount-codes/#dialog=/admin/promote/discount-code/add")
             driver.find_element_by_id("id_assigned_to_0").click()
             time.sleep(1)
             driver.find_element_by_id("id_code").clear()
