@@ -12,11 +12,11 @@ import time
 
 amountoff = "100"
 desc = " Show Pass"
-tagnum = [1, 3, 4, 5, 25, 44]#index starts a 1, stupid Ticketleap
-startdate = "06/15/18" #mm/dd/yy
+tagnum = []#worry about this later [1, 3, 4, 5, 25, 44]#index starts a 1, stupid Ticketleap
+startdate = "06/15/19" #mm/dd/yy
 starttime = "12:00"
 startampm = "am"
-enddate = "07/03/18" #mm/dd/yy
+enddate = "07/03/19" #mm/dd/yy
 endtime = "12:00"
 endampm = "am"
 
@@ -45,10 +45,9 @@ class Testcode123(unittest.TestCase):
         driver = self.driver
         driver.get("http://www.ticketleap.com/login/?next=http%3A//veronicatangfringe.ticketleap.com/")
         driver.find_element_by_id("id_username").clear()
-        driver.find_element_by_id("id_username").send_keys("chenk21@mit.edu")
+        driver.find_element_by_id("id_username").send_keys("***")
         driver.find_element_by_id("id_password").clear()
-        #sub in your password here you stupid Pikachu
-        driver.find_element_by_id("id_password").send_keys("screw you")
+        driver.find_element_by_id("id_password").send_keys("***")
         driver.find_element_by_id("email_login_button").click()
         time.sleep(1)
         for code in list:

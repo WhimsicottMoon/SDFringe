@@ -1,4 +1,4 @@
-//Veronica Tang  05/27/18
+//Veronica Tang  05/27/19
 //trying to get the hashmap to work
 //got rid of all lowercase letters
 
@@ -12,7 +12,7 @@ public class FringePassesv2
 {
   private static final char[] NUMSANDLETTERS = {'A', 'B', 'C', 'D', 'E' ,'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
   static final String[] passcodes = {"03","05","10", "CC","01", "AC", "VP"};
-  static final boolean testing = false;
+  static final boolean testing = true;
   
   //TEST FONTS!  CAP "S" WORKS OR  NO?  Hopefully will work...??  
   
@@ -24,7 +24,7 @@ public class FringePassesv2
     int numOfComp = 0;
     int numBomb = 0;
     int numOfArtistComp = 0;
-    int numOfVIP = 20;
+    int numOfVIP = 0;
     int[] tasks = {numOfThree, numOfFive, numOfTen, numOfComp, numBomb,numOfArtistComp, numOfVIP};
     
     //Create hashmap with pre-existing codes
