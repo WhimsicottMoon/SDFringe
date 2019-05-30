@@ -13,12 +13,12 @@ import time
 amountoff = "100"
 desc = " Show Pass"
 tagnum = []#worry about this later [1, 3, 4, 5, 25, 44]#index starts a 1, stupid Ticketleap
-startdate = "06/15/19" #mm/dd/yy
+startdate = "05/15/19" #mm/dd/yy
 starttime = "12:00"
 startampm = "am"
 enddate = "07/03/19" #mm/dd/yy
-endtime = "12:00"
-endampm = "am"
+endtime = "3:00"
+endampm = "pm"
 
 list = [line.rstrip('\n') for line in open('NewCodes.txt')]
 for code in list:
@@ -77,6 +77,7 @@ class Testcode123(unittest.TestCase):
             driver.find_element_by_id("id_end_time").clear()
             driver.find_element_by_id("id_end_time").send_keys(endtime)
             Select(driver.find_element_by_id("id_end_ampm")).select_by_visible_text(endampm)
+            '''
             #excluding certain ones
             Select(driver.find_element_by_id("id_scope")).select_by_visible_text("Specific Events")
             driver.find_element_by_css_selector("div.tl-fs-select").click()
@@ -84,7 +85,8 @@ class Testcode123(unittest.TestCase):
             for x in range (0, len(tagnum)):
                 driver.find_element_by_xpath("//*[@id='undefined-dropdown']/div/ul[2]/li["+str(tagnum[x])+"]/label/input").click()
                 #print(tagnum[x])
-            driver.find_element_by_css_selector("button.tl-fs-dd-done.secondary-button").click()
+            driver.find_element_by_css_selector("button.tl-fs-dd-done.secondary-button").click() #haha hthis doesn't work
+            '''
             if(testcode(code)!="Unlimited"):
                 #selecting limit uses
                 driver.find_element_by_id("id_limit_uses_2").click()
